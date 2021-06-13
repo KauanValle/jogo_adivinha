@@ -15,19 +15,17 @@
         <div id="container">
             <header>
                 <h1 id="tituloPrincipal">Você consegue adivinhar?</h1>
-                <!-- <h2 id="subtituloPrincipal">Como esse jogo funciona?</h2> ADICIONAR JAVASCRIPT!!!! NÃO ESQUECER -->
             </header>
             <section>
             </section>
             <main>
                 <div id="telaInicial">
                     <h2>Seja bem-vindo ao jogo "Você consegue adivinhar?"</h2>
-                    <p></p>
                     <p>Esse jogo é de simples funcionalidade e bem simples de ser jogado.
                     Consiste em um sistema onde irá gerar um número aleatório entre <b>0</b> e <b>100</b> 
                     e você terá que acertar com precisão o número em que foi sorteado pelo sistema. 
-                    Você terá inicialmente 30$ para poder gastar com 1 dica que dará uma margem da onde estará o número que foi gerado pelo sistema.
-                    A cada erro, descontará o total de 1$ do seu saldo total. Se ficar abaixo de 0$ significa que você perdeu o jogo. 
+                    Você terá inicialmente R$20 para poder gastar com 1 dica que dará uma margem da onde estará o número que foi gerado pelo sistema.
+                    A cada erro, descontará o total de R$1 do seu saldo total. Se ficar com o saldo de R$0 significa que você perdeu o jogo. 
                     Ainda não entendeu? Assista o vídeo de explicação para entender melhor sobre a funcionalidade do jogo.</p>
                     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/_JY6rOkPfQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <input type="button" value="COMEÇAR!" id="botaoComecar">
@@ -35,8 +33,10 @@
                 </div>
                 <div id="telaDoJogo">
 
-                    <p id="paragrafoSaldo">Seu saldo:</p><span id="dinheiroInicial">R$20</span>
-                    <p id="subtitle">Digite abaixo o valor que você acha que está certo! </p>
+                    <div id="divDinheiroInicial">
+                        <p id="paragrafoSaldo">Seu saldo:</p><span id="dinheiroInicial">R$20</span>
+                        <p id="subtitle">Digite abaixo o valor que você acha que está certo! </p>
+                    </div>
                     
                     <div id="divCampodeTexto">
                         <input type="text" name="" id="AreaDeTexto" placeholder="Chute um número entre 0 e 100">
@@ -56,11 +56,9 @@
                     <div id="resultado">
                         <div id="espaçoNumeros">
                             <p id="result"></p>
-                            <!-- <p id="resultNumber"></p> -->
                         </div>
                         <p id="dinheiroFinal"></p>
                     </div>
-                    <!-- <div>1 , 2 , 3</div> -->
                 </div>
             </main>
             <script src="script/scriptPrincipal.js"></script>

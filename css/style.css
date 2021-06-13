@@ -22,7 +22,7 @@ body{
     min-height: 100vh;
     margin: 0 auto;
     /* border: 1px solid red; */
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 header{
     /* border: 1px solid red; */
@@ -185,11 +185,13 @@ main{
     padding: 10px;
     border-radius: 20px;
     margin: 30px;
-    height: 450px;
+    /* height: 450px; */
     width: 70%;
     border: 1px solid rgba(0, 0, 0, 0.383);
 }
 #espaçoNumeros{
+    display: flex;
+    justify-content: center;
     margin-bottom: 60px;
 }
 #dinheiroFinal{
@@ -227,4 +229,48 @@ main{
 .red{
     color: red;
     font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+    body{
+        height: 0vh;
+        /* font-size: 22px; */
+    }
+    #telaInicial{
+        font-size: 18px;
+    }
+    #telaInicial h2{
+        font-size: 20px;
+        display: flex;
+    }
+    #container{
+        width: 85%;
+        min-height: 100vh;
+    }
+    header #tituloPrincipal{
+        font-size: 28px;
+    }
+    #video{
+        width: 230px;
+    }
+    #subtitle{
+        display: flex;
+    }
+    #divCampodeTexto{
+        width: 100%;
+    }
+    #AreaDeTexto{
+        width: 100%;
+        font-size: 16px;
+    }
+    #divDinheiroInicial{
+        width: 100%;
+        font-size: 20px;
+    }
+    #telaDoJogo{
+        width: 85%;
+    }
+    #result, #dinheiroFinal, #dinheiroInicial, #paragrafoSaldo, #subtitle{
+        font-size: 20px;
+    }
 }

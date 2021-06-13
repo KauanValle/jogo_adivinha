@@ -10,8 +10,8 @@ var valorDinheiro = 20;
 
 
 divResultado.style.display = 'none'
-telaInicial.style.display = 'none'
-telaJogo.style.display = 'flex'
+telaInicial.style.display = 'FLEX'
+telaJogo.style.display = 'none'
 
 var lista = [];
 var caixaText = document.getElementById('AreaDeTexto')
@@ -66,9 +66,23 @@ function principal(){
                 showConfirmButton: false,
                 timer: 1500
             })
-        
-            resultado.innerHTML = `Você chutou ${lista.length - 1} números até acertar, sendo eles:`
-            for(let cont = 0; cont < lista.length - 1; cont++){     
+            
+            let verificarNumero = lista.length - 1
+
+            if(verificarNumero == 1){
+                resultado.innerHTML = `Você chutou ${verificarNumero} número até acertar, sendo ele:`
+            }else{
+
+                if(verificarNumero != 0){
+
+                    resultado.innerHTML = `Você chutou ${verificarNumero} números até acertar, sendo eles:`
+                }else{
+                    resultado.innerHTML = `PARABÉNS, VOCÊ ACERTOU DE PRIMEIRA!`
+                }
+
+            }
+
+            for(let cont = 0; cont < verificarNumero; cont++){     
 
                 resultado.innerHTML += ` ${lista[cont]} |`
             }
@@ -119,7 +133,7 @@ function principal(){
 
 function dica(){
     
-    valorDinheiro -= 10;
+    valorDinheiro -= 15;
     
     if(valorDinheiro < 0){
         valorDinheiro = 0;
@@ -128,8 +142,8 @@ function dica(){
     dinheiroInicial.innerHTML = `R$${valorDinheiro}`
     
     let dica = document.getElementById('dica')
-    let maior = randomizar + 5
-    let menor = randomizar - 5
+    let maior = randomizar + Math.floor(Math.random() * ( 5 - 1 ) + 1)
+    let menor = randomizar - Math.floor(Math.random() * ( 5 - 1 ) + 1)
 
     if(menor < 0){
         menor = 0;
@@ -176,5 +190,3 @@ function comecar(){
     telaJogo.style.display = 'flex'
 
 }
-
-console.log(valorDinheiro)
