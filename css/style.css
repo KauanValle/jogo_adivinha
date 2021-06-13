@@ -1,3 +1,5 @@
+@import url(images/lampada.png);
+
 *{
     margin: 0;
     padding: 0;
@@ -244,11 +246,11 @@ main{
         display: flex;
     }
     #container{
-        width: 85%;
+        width: 100%;
         min-height: 100vh;
     }
     header #tituloPrincipal{
-        font-size: 22px;
+        font-size: 26px;
     }
     #video{
         width: 230px;
@@ -271,6 +273,6 @@ main{
         width: 85%;
     }
     #result, #dinheiroFinal, #dinheiroInicial, #paragrafoSaldo, #subtitle{
-        font-size: 20px;
+        font-size: 22px;
     }
 }
